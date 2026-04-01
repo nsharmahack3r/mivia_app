@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mivia/src/features/auth/view/login_view.dart';
+import 'package:mivia/src/features/auth/view/signup_view.dart';
 import 'package:mivia/src/features/splash/view/splash_view.dart';
 
 final router = GoRouter(
@@ -10,6 +11,10 @@ final router = GoRouter(
     GoRoute(
       path: LoginView.routePath,
       builder: (context, state) => const LoginView(),
+    ),
+    GoRoute(
+      path: SignupView.routePath,
+      builder: (context, state) => const SignupView(),
     ),
   ],
 );

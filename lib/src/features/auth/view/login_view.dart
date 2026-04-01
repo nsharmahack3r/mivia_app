@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:mivia/src/features/auth/view/signup_view.dart';
 import 'package:mivia/src/resources/assets.gen.dart';
 
 class LoginView extends StatefulWidget {
@@ -200,7 +202,9 @@ class _LoginViewState extends State<LoginView> {
                       style: TextStyle(color: Colors.white54, fontSize: 14),
                     ),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        context.pushReplacement(SignupView.routePath);
+                      },
                       child: const Text(
                         'Sign Up',
                         style: TextStyle(
