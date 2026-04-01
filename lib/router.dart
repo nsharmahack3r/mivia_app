@@ -9,13 +9,7 @@ final router = GoRouter(
     GoRoute(path: '/', builder: (context, state) => const SplashView()),
     GoRoute(
       path: LoginView.routePath,
-      pageBuilder: (context, state) => CustomTransitionPage(
-        key: state.pageKey,
-        child: const LoginView(),
-        transitionsBuilder: (context, animation, secondaryAnimation, child) {
-          return FadeTransition(opacity: animation, child: child);
-        },
-      ),
+      builder: (context, state) => const LoginView(),
     ),
   ],
 );

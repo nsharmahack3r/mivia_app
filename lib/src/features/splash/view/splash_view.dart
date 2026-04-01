@@ -1,6 +1,7 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import 'package:mivia/src/features/auth/view/login_view.dart';
 import 'package:mivia/src/resources/assets.gen.dart';
@@ -52,9 +53,7 @@ class _SplashViewState extends State<SplashView> with TickerProviderStateMixin {
     await _rotateController.forward();
     // Navigate to login
     if (mounted) {
-      Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (_) => const LoginView()),
-      );
+      context.pushReplacement(LoginView.routePath);
     }
   }
 
