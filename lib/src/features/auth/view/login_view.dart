@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mivia/src/features/auth/view/signup_view.dart';
+import 'package:mivia/src/features/home/view/home_view.dart';
 import 'package:mivia/src/resources/assets.gen.dart';
 
 class LoginView extends StatefulWidget {
@@ -116,7 +117,9 @@ class _LoginViewState extends State<LoginView> {
                   width: double.infinity,
                   height: 52,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      context.pushReplacement(HomeView.routePath);
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF2979FF),
                       foregroundColor: Colors.white,
@@ -181,7 +184,9 @@ class _LoginViewState extends State<LoginView> {
                     ),
                     const SizedBox(width: 20),
                     _SocialButton(
-                      onTap: () {},
+                      onTap: () {
+                        context.pushReplacement(HomeView.routePath);
+                      },
                       backgroundColor: const Color(0xFF1877F2),
                       child: const Icon(
                         Icons.facebook,

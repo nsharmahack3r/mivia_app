@@ -14,20 +14,49 @@ import 'package:flutter/widgets.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/branding.png
+  AssetGenImage get branding =>
+      const AssetGenImage('assets/icons/branding.png');
+
+  /// File path: assets/icons/branding_light.png
+  AssetGenImage get brandingLight =>
+      const AssetGenImage('assets/icons/branding_light.png');
+
   /// File path: assets/icons/google.png
   AssetGenImage get google => const AssetGenImage('assets/icons/google.png');
 
   /// File path: assets/icons/icon.png
   AssetGenImage get icon => const AssetGenImage('assets/icons/icon.png');
 
+  /// File path: assets/icons/icon_dark.png
+  AssetGenImage get iconDark =>
+      const AssetGenImage('assets/icons/icon_dark.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [google, icon];
+  List<AssetGenImage> get values => [
+    branding,
+    brandingLight,
+    google,
+    icon,
+    iconDark,
+  ];
+}
+
+class $AssetsImagesGen {
+  const $AssetsImagesGen();
+
+  /// File path: assets/images/profile.jpg
+  AssetGenImage get profile => const AssetGenImage('assets/images/profile.jpg');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [profile];
 }
 
 class Assets {
   const Assets._();
 
   static const $AssetsIconsGen icons = $AssetsIconsGen();
+  static const $AssetsImagesGen images = $AssetsImagesGen();
 }
 
 class AssetGenImage {
